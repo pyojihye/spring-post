@@ -28,5 +28,12 @@ public class PostRepository {   //반드시 DB를 바라보아야 함.
         return new Post(postId, "테스트","테스트합니다~",0);
     }
 
+    public Post insertPost(Post post){
+        return post;
+    }
+
+    public String deletePost(int postId){
+        return "삭제 되었습니다";
+    }
 
 }

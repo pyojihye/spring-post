@@ -24,4 +24,13 @@ public class PostService { //서비스는 반드시 트랜잭션으로 처리되
     public Post getPostById(int postId){
         return repository.selectPostById(postId);
     }
+
+    public Post setPost(Post post){
+        return repository.insertPost(post);
+    }
+
+    public String removePost(int postId){
+        return repository.deletePost(postId);
+    }
+
 }

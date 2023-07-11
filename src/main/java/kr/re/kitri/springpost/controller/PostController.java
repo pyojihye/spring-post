@@ -28,17 +28,17 @@ public class PostController {   //HTTP 처리를 해야 함. Presentation layer
         return service.getPostById(postId);
     }
 
-    /*@PostMapping("/posts")
-    public String registPost(String post) {
+    @PostMapping("/posts")
+    public Post registPost(Post post) {
         return service.setPost(post);
     }
 
-    @DeleteMapping("/posts/{id}")
-    public void removePost(){
-        return service.removePost();
+    @DeleteMapping("/posts/{postId}")
+    public String removePost(@PathVariable int postId){
+        return service.removePost(postId);
     }
 
-    @PutMapping("/posts")
+    /*@PutMapping("/posts")
     public String modifyPost(){
         return service.modifyPost();
     }*/
