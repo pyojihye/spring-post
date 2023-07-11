@@ -28,8 +28,14 @@ public class PostController {   //HTTP 처리를 해야 함. Presentation layer
         return service.getPostById(postId);
     }
 
+//    @PostMapping("/posts")  //post 방식은 get 방식과 다르게 body를 쓸 수 있다. << param으로 등록
+//    public Post registPost(Post post) {
+//        return service.setPost(post);
+//    }
+
     @PostMapping("/posts")
-    public Post registPost(Post post) {
+    public Post registPost(@RequestBody Post post){
+        System.out.println(post);   //차후 logging으로 변경 필요
         return service.setPost(post);
     }
 
