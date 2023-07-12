@@ -40,8 +40,8 @@ public class PostController {   //HTTP 처리를 해야 함. Presentation layer
     }
 
     @DeleteMapping("/posts/{postId}")
-    public String removePost(@PathVariable int postId){
-        return service.removePost(postId);
+    public void removePost(@PathVariable int postId){
+        service.removePost(postId);
     }
 
     /*@PutMapping("/posts")

@@ -30,11 +30,12 @@ public class PostService { //서비스는 반드시 트랜잭션으로 처리되
 //    }
 
     public Post setPost(Post post){
-        return repository.insertPost(post);
+        repository.insertPost(post);
+        return post;
     }
 
-    public String removePost(int postId){
-        return repository.deletePost(postId);
+    public void removePost(int postId){
+        repository.deletePost(postId);
     }
 
 }
