@@ -38,4 +38,8 @@ public class PostService { //서비스는 반드시 트랜잭션으로 처리되
         repository.deletePost(postId);
     }
 
+    public void modifyPost(Post post){
+        repository.updatePost(post);
+    }
+
 }

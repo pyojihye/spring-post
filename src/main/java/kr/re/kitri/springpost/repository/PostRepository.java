@@ -2,6 +2,7 @@ package kr.re.kitri.springpost.repository;
 
 import kr.re.kitri.springpost.model.Post;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -51,5 +52,6 @@ public interface PostRepository {   //반드시 DB를 바라보아야 함.
 
     void deletePost(int postId);
 
+    void updatePost(Post post);
 
 }

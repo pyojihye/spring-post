@@ -44,9 +44,9 @@ public class PostController {   //HTTP 처리를 해야 함. Presentation layer
         service.removePost(postId);
     }
 
-    /*@PutMapping("/posts")
-    public String modifyPost(){
-        return service.modifyPost();
-    }*/
+    @PutMapping("/posts/{postId}")
+    public void modifyPost(@RequestBody Post post){
+        service.modifyPost(post);
+    }
 
 }
