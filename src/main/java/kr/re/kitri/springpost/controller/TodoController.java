@@ -24,21 +24,22 @@ public class TodoController {
     }
 
     @PostMapping("/todos")
-    public Todo registerTodos(){
-        return service.InsertTodos();
+    public Todo registerTodos(@RequestBody Todo todo){
+        service.insertTodos(todo);
+        return todo;
     }
 
-    @PutMapping("/todos/{id}")
-    public String doneTodos(@PathVariable int id){
-        return service.completeTodos(id);
-    }
-
-    @DeleteMapping("/todos/{id}")
-    public String removeTodos(@PathVariable int id){
-        return service.removeTodos(id);
-    }
-
-//    @GetMapping("/todos")
+//    @PutMapping("/todos/{id}")
+//    public String doneTodos(@PathVariable int id){
+//        return service.completeTodos(id);
+//    }
+//
+//    @DeleteMapping("/todos/{id}")
+//    public String removeTodos(@PathVariable int id){
+//        return service.removeTodos(id);
+//    }
+//
+//    @GetMapping("/todos/search/{id}")
 //    public String searchTodos(@PathVariable String title, Boolean completed){
 //        return service.findTodos();
 //    }

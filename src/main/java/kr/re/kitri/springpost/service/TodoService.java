@@ -21,19 +21,19 @@ public class TodoService {
         return repository.selectTodos(id);
     }
 
-    public Todo InsertTodos(){
-        return repository.insertTodos();
+    public void insertTodos(Todo todo){
+        repository.insertTodos(todo);
     }
 
-    public String completeTodos(int id){
-        return repository.doneTodos(id);
-    }
-
-    public String removeTodos(int id){
-        return repository.deleteTodos(id);
-    }
-
-    public String findTodos(){
-        return repository.searchTodoList();
-    }
+//    public String completeTodos(int id){
+//        return repository.doneTodos(id);
+//    }
+//
+//    public String removeTodos(int id){
+//        return repository.deleteTodos(id);
+//    }
+//
+//    public String findTodos(){
+//        return repository.searchTodoList();
+//    }
 }
