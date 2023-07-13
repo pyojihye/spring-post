@@ -4,6 +4,7 @@ import kr.re.kitri.springpost.model.Post;
 import kr.re.kitri.springpost.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,6 +30,7 @@ public class PostService { //서비스는 반드시 트랜잭션으로 처리되
 //        return repository.insertPost(post);
 //    }
 
+    @Transactional  //트랜잭션 처리를 위한 어노테이션
     public Post setPost(Post post){
         repository.insertPost(post);
         return post;
